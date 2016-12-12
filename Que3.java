@@ -5,6 +5,7 @@ public class Que3 {
         int n = s.nextInt();
         for(int i=0; i<n; i++)
             System.out.println("*");
+        s.close();
     }
 
 }

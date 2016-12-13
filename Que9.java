@@ -14,12 +14,12 @@ public class Que9 {
     public static Integer[] generate(int n){
         if(n == 1)
             return new Integer[] {new Integer(1)};
-        ArrayList list = new ArrayList();
+        List primeFactors = new List();
         for(int i=2; i<=n; i++){
             if(n % i == 0 && isPrime(i))
-                list.add(new Integer(i));
+                primeFactors.add(i);
         }
-        return (Integer[])list.toArray(new Integer[1]);
+        return primeFactors.toArray();
     }
 
     public static boolean isPrime(int n){
@@ -29,5 +29,17 @@ public class Que9 {
                 return false;
         }
         return true;
+    }
+}
+
+class List {
+    private ArrayList list = new ArrayList();
+
+    public void add(int n){
+        list.add(new Integer(n));
+    }
+
+    public Integer[] toArray(){
+        return (Integer[])list.toArray(new Integer[1]);
     }
 }

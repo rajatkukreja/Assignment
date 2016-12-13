@@ -14,9 +14,8 @@ public class Que9 {
     public static Integer[] generate(int n){
         if(n == 1)
             return new Integer[] {new Integer(1)};
-        int end = (int)Math.sqrt(n);
         ArrayList list = new ArrayList();
-        for(int i=2; i<=end; i++){
+        for(int i=2; i<=n; i++){
             if(n % i == 0 && isPrime(i))
                 list.add(new Integer(i));
         }
